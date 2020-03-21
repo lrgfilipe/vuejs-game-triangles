@@ -3,7 +3,7 @@ export default {
   mode: 'spa',
 
   router: {
-    base: '/triangles/'
+    base: '/vuejs-game-triangles/'
   },
 
   head: {
