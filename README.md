@@ -5,10 +5,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/lrgfilipe/vuejs-game-triangles?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/lrgfilipe/vuejs-game-triangles?style=social)
 
-<img src="https://github.com/lrgfilipe/vuejs-game-triangles/blob/master/screen.png?raw=true" height="400">
-
 
 [Demo](https://lrgfilipe.github.io/vuejs-game-triangles/)
+
+<img src="https://github.com/lrgfilipe/vuejs-game-triangles/blob/master/screen.png?raw=true" height="400">
 
 #### Project setup
 ```
