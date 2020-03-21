@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="h-32 text-2xl text-center font-bold text-gray-700 flex flex-col justify-center"
+      class="h-32 text-2xl text-center font-bold text-gray-700 flex flex-col justify-center cursor-pointer"
       @click="start()"
     >
       {{ nextPlay }}
@@ -53,13 +53,13 @@ export default {
     return {
       board: ['up', 'down', 'left', 'right'],
       nextPlay: 'TAP HERE TO START ...',
-      pct: 100,
       interval: null,
       totalClock: 4000,
       clock: 4000,
       score: 0,
       highScore: 0,
-      gameOver: false
+      gameOver: false,
+      inGame: false
     }
   },
   mounted () {
@@ -96,18 +96,28 @@ export default {
       if (!_.isEqual(item, this.nextPlay)) {
         this.endGame()
       } else {
+        this.changeScore(this.score + 1)
+        this.$emit('score', this.score)
         this.getGame()
       }
     },
     start () {
-      this.clock = this.totalClock
-      this.gameOver = false
-      this.score = 0
-      setTimeout(() => {
-        this.getGame()
-      }, 500)
+      if (!this.inGame) {
+        this.inGame = true
+        this.clock = this.totalClock
+        this.gameOver = false
+        this.changeScore(0)
+        setTimeout(() => {
+          this.getGame()
+        }, 500)
+      }
+    },
+    changeScore (val) {
+      this.score = val
+      this.$emit('score', val)
     },
     endGame () {
+      this.inGame = false
       clearInterval(this.interval)
       this.gameOver = true
       this.nextPlay = 'TAP HERE TO START ...'

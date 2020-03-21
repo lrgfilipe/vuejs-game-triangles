@@ -1,21 +1,32 @@
 <template>
   <div>
     <div class="border-b-2 border-white flex pb-4">
-      <div class="w-1/2 flex items-center justify-center border-r-2 border-white font-medium text-2xl text-white ">
+      <div class="w-1/2 flex items-center justify-center font-medium text-2xl text-white">
         App Name
       </div>
-      <div class="w-1/2 text-right">
-        <div>Score: </div>
-        <div>High Score: </div>
+      <div class="w-1/2 text-center font-medium text-white rounded-lg text-lg bg-orange-500">
+        <div class="border-b border-white py-1">Score: {{ score }}</div>
+        <div class="py-1">High Score: {{ highScore }} </div>
       </div>
     </div>
-    <board />
+    <board @score="score = $event" />
   </div>
 </template>
 
 <script>
 import Board from '~/components/Board.vue'
 export default {
-  components: { Board }
+  components: { Board },
+  data () {
+    return {
+      score: 0,
+      highScore: 0
+    }
+  },
+  methods: {
+    setScore (event) {
+      this.score = event
+    }
+  }
 }
 </script>
