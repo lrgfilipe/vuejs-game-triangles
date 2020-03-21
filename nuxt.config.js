@@ -1,12 +1,11 @@
 
 export default {
+  mode: 'spa',
+
   router: {
     base: '/triangles/'
   },
-  mode: 'spa',
-  /*
-  ** Headers of the page
-  */
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
