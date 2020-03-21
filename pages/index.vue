@@ -5,11 +5,15 @@
         App Name
       </div>
       <div class="w-1/2 text-center font-medium text-white rounded-lg text-lg bg-orange-500">
-        <div class="border-b border-white py-1">Score: {{ score }}</div>
-        <div class="py-1">High Score: {{ highScore }} </div>
+        <div class="border-b border-white py-1">
+          Score: {{ score }}
+        </div>
+        <div class="py-1">
+          High Score: {{ highScore }}
+        </div>
       </div>
     </div>
-    <board @score="score = $event" />
+    <board @score="setScore" />
   </div>
 </template>
 
@@ -23,9 +27,16 @@ export default {
       highScore: 0
     }
   },
+  mounted () {
+    this.highScore = localStorage.getItem('highScore') || 0
+  },
   methods: {
     setScore (event) {
       this.score = event
+      if (this.score > this.highScore) {
+        this.highScore = this.score
+        localStorage.setItem('highScore', this.highScore)
+      }
     }
   }
 }
