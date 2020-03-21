@@ -6,9 +6,9 @@
 ![GitHub stars](https://img.shields.io/github/stars/lrgfilipe/vuejs-game-triangles?style=social)
 
 
+### [Demo](https://lrgfilipe.github.io/vuejs-game-triangles/)
 
-
-### Project setup
+##### Project setup
 ```
 git clone https://github.com/lrgfilipe/vuejs-game-triangles.git
 cd vuejs-game-triangles
