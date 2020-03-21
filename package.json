@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-tailwind-template",
+  "name": "Vuejs Game - Triangles",
   "version": "1.0.0",
-  "description": "My shining Nuxt.js project",
+  "description": "Vuejs Game - Triangles",
   "author": "lrgfilipe",
   "private": false,
   "scripts": {
