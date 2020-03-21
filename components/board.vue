@@ -46,31 +46,25 @@ import _ from 'lodash'
 import Triangle from '~/components/Triangle.vue'
 export default {
   components: { Triangle, ProgressBar },
-  props: {
-    // type: { type: String, required: true }
-  },
   data () {
     return {
       board: ['up', 'down', 'left', 'right'],
       nextPlay: 'TAP HERE TO START ...',
       interval: null,
-      totalClock: 4000,
-      clock: 4000,
+      totalClock: 2000,
+      clock: 2000,
       score: 0,
       highScore: 0,
       gameOver: false,
       inGame: false
     }
   },
-  mounted () {
-    // this.getGame()
-  },
   methods: {
     getGame () {
       const possible = ['up', 'down', 'left', 'right']
 
       // next play
-      this.nextPlay = _.sample(possible)
+      this.nextPlay = _.chain(possible).clone().filter(item => item !== this.nextPlay).sample().value()
       this.board = []
 
       let i
@@ -125,4 +119,3 @@ export default {
   }
 }
 </script>
-,
