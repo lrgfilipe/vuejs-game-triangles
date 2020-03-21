@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="border-b-2 border-white flex pb-4">
+  <div class="h-full flex flex-col">
+    <div class="border-b-2 border-white flex pb-4 flex-shrink-0">
       <div class="w-1/2 flex items-center justify-center font-medium text-2xl text-white">
         App Name
       </div>
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <board @score="setScore" />
+    <board @score="setScore" class="flex-grow" />
   </div>
 </template>
 

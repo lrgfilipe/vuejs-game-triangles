@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col items-between justify-between">
     <div
       class="h-32 text-2xl text-center font-bold text-gray-700 flex flex-col justify-center cursor-pointer"
       @click="start()"
@@ -18,7 +18,7 @@
       :bar-border-radius="100"
       bar-color="#ed8936"
     />
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap  border border-red-500 mb-20 sm:mb-0">
       <div
         v-for="(item, index) in board"
         :key="index"
