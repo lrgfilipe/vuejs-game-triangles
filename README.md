@@ -18,11 +18,11 @@ npm install
 npm run dev
 ```
 #### Tech Stack
-- [Vuejs] (https://vuejs.org/)
-- [NuxtJs] (https://nuxtjs.org/)
-- [TailwindCss] (https://tailwindcss.com/)
-- [Lodash] (https://lodash.com/)
-- [Vue Simple Progress] (https://www.npmjs.com/package/vue-simple-progress)
+- [Vuejs](https://vuejs.org/)
+- [NuxtJs](https://nuxtjs.org/)
+- [TailwindCss](https://tailwindcss.com/)
+- [Lodash](https://lodash.com/)
+- [Vue Simple Progress](https://www.npmjs.com/package/vue-simple-progress)
 
 #### MIT License
 
