@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My shining Nuxt.js project",
   "author": "lrgfilipe",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -24,6 +24,7 @@
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/tailwindcss": "^1.4.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^7.0.2",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": "^0.5.2",
     "push-dir": "^0.4.1"

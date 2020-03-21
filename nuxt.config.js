@@ -1,5 +1,12 @@
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/triangles/'
+  }
+} : {}
+
 export default {
+  ...routerBase,
   mode: 'spa',
   /*
   ** Headers of the page
