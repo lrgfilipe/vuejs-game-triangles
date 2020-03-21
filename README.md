@@ -17,7 +17,7 @@ cd vuejs-game-triangles
 npm install
 npm run dev
 ```
-#### Tech Stack
+#### Used in this project
 - [Vuejs](https://vuejs.org/)
 - [NuxtJs](https://nuxtjs.org/)
 - [TailwindCss](https://tailwindcss.com/)
